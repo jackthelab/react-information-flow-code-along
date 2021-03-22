@@ -1,13 +1,10 @@
 import React, { Component } from 'react'
-import { getRandomColor } from './randomColorGenerator.js'
+// import { getRandomColor } from './randomColorGenerator.js'
 
 class Child extends Component {
   render() {
     return (
-      <div
-        className="child"
-        style={{backgroundColor: "#FFF"}}
-      ></div>
+      <div className="child" style={{backgroundColor: "#FFF"}} onClick={this.props.clickingAction}></div>
     )
   }
 }

@@ -11,11 +11,17 @@ class Parent extends Component {
     }
   }
 
+  handleClick = () => {
+    this.setState({
+      color: getRandomColor()
+    })
+  }
+
   render() {
     return (
       <div className="parent" style={{backgroundColor: this.state.color}}>
-        <Child />
-        <Child />
+        <Child clickingAction={this.handleClick} />
+        <Child clickingAction={this.handleClick} />
       </div>
     )
   }
